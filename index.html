@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Business Name | Family Dog Sitting</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="logo">🐾 Your Business Name</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#book">Book Now</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Loving care for your dog, from our family to yours.</h1>
+    <p>A trusted, family-run dog sitting service — walks, drop-in visits, boarding, and overnight sitting.</p>
+    <a href="#book" class="btn">Request a Booking</a>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap">
+    <h2>About Us</h2>
+    <p>We're a small family-run dog sitting business. We started by helping friends and neighbors, and we treat every dog we watch like our own. Whether it's a quick walk or a week-long stay, your pup gets our full attention and love.</p>
+  </div>
+</section>
+
+<section id="services" class="section alt">
+  <div class="wrap">
+    <h2>Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Dog Walking</h3>
+        <p>Daily walks to keep your dog happy and active.</p>
+      </div>
+      <div class="service-card">
+        <h3>Drop-In Visits</h3>
+        <p>Quick check-ins for feeding, potty breaks, and playtime.</p>
+      </div>
+      <div class="service-card">
+        <h3>Boarding</h3>
+        <p>Your dog stays with our family, treated like part of it.</p>
+      </div>
+      <div class="service-card">
+        <h3>Overnight Sitting</h3>
+        <p>We come to your home so your dog stays comfortable and calm.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="section">
+  <div class="wrap">
+    <h2>Request a Booking</h2>
+    <p class="form-note">Fill this out and we'll get back to you as soon as we can to confirm availability.</p>
+
+    <!--
+      SETUP NOTE (remove this comment once done):
+      1. Go to formspree.io and make a free account with your business email.
+      2. Create a new form, they'll give you a form ID like "abc123wxyz".
+      3. Replace YOUR_FORM_ID below with that ID.
+      Until then, this form will show an error when submitted — that's expected, it's not hooked up yet.
+    -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="booking-form">
+      <div class="form-row">
+        <label>Your Name
+          <input type="text" name="customer_name" required>
+        </label>
+        <label>Phone Number
+          <input type="tel" name="phone" required>
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label>Email
+          <input type="email" name="email" required>
+        </label>
+        <label>Address
+          <input type="text" name="address" required>
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label>Pet Name
+          <input type="text" name="pet_name" required>
+        </label>
+        <label>Breed
+          <input type="text" name="breed">
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label>Size
+          <select name="size">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+          </select>
+        </label>
+        <label>Service Needed
+          <select name="service_type">
+            <option value="Dog Walking">Dog Walking</option>
+            <option value="Drop-In Visits">Drop-In Visits</option>
+            <option value="Boarding">Boarding</option>
+            <option value="Overnight Sitting">Overnight Sitting</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="form-row">
+        <label>Start Date
+          <input type="date" name="start_date" required>
+        </label>
+        <label>End Date
+          <input type="date" name="end_date" required>
+        </label>
+      </div>
+
+      <label class="full-width">Anything else we should know?
+        <textarea name="notes" rows="3"></textarea>
+      </label>
+
+      <button type="submit" class="btn">Submit Request</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2026 Your Business Name. Made with love for dogs everywhere.</p>
+  </div>
+</footer>
+
+</body>
+</html>
