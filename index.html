@@ -193,39 +193,38 @@
     <h2>Request a Booking</h2>
     <p class="section-note">Fill this out and we'll get back to you as soon as we can to confirm availability.</p>
 
-    <!--
-      SETUP NOTE (remove this comment once done):
-      1. Go to formspree.io and make a free account with your business email.
-      2. Create a new form, they'll give you a form ID like "abc123wxyz".
-      3. Replace YOUR_FORM_ID below with that ID.
-      Until then, this form will show an error when submitted. That's expected, it's not hooked up yet.
-    -->
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="booking-form" id="booking-form">
-      <input type="hidden" name="_subject" value="New Tails From Home booking request!">
-
-      <!-- Shows only for returning customers (script.js turns it on) -->
-      <p class="welcome-back" id="welcome-back" hidden>
-        👋 Welcome back! We filled in your info from last time.
-        <button type="button" class="link-btn" id="clear-saved">Not you? Clear it</button>
-      </p>
+    <!-- Sends to our Google Sheet through Google Apps Script. Setup steps: apps-script/SETUP.md -->
+    <form class="booking-form" id="booking-form" novalidate>
 
       <fieldset>
+        <legend>Your phone number</legend>
+        <p class="hint">Booked with us before? Type your number and tap <strong>Look me up</strong>. We'll fill in the rest.</p>
+        <div class="lookup-row">
+          <input type="tel" name="phone" id="phone" autocomplete="tel" inputmode="tel" placeholder="(555) 555-5555" required aria-label="Phone number">
+          <button type="button" class="btn btn-small" id="lookup-btn">Look me up</button>
+        </div>
+        <p class="lookup-msg" id="lookup-msg" hidden></p>
+      </fieldset>
+
+      <fieldset id="contact-box">
         <legend>About you</legend>
-        <div class="form-row">
+        <!-- Shows for returning customers instead of the boxes below -->
+        <p class="on-file" id="on-file" hidden>
+          ✓ We have your name, email and address on file.
+          <button type="button" class="link-btn" id="edit-contact">Need to change something?</button>
+        </p>
+        <div id="contact-fields" class="contact-fields">
           <label>Your Name
             <input type="text" name="customer_name" autocomplete="name" required>
           </label>
-          <label>Phone Number
-            <input type="tel" name="phone" autocomplete="tel" required>
-          </label>
-        </div>
-        <div class="form-row">
-          <label>Email
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-          <label>Address
-            <input type="text" name="address" autocomplete="street-address" required>
-          </label>
+          <div class="form-row">
+            <label>Email
+              <input type="email" name="email" autocomplete="email" required>
+            </label>
+            <label>Address
+              <input type="text" name="address" autocomplete="street-address" required>
+            </label>
+          </div>
         </div>
       </fieldset>
 
@@ -310,11 +309,19 @@
 
       <label class="remember">
         <input type="checkbox" id="remember-me" checked>
-        Remember my info on this device for next time
+        Remember my phone number on this device
       </label>
 
-      <button type="submit" class="btn btn-full">Submit Request</button>
+      <p class="error" id="form-error" hidden></p>
+      <button type="submit" class="btn btn-full" id="submit-btn">Submit Request</button>
     </form>
+
+    <!-- Shows after a booking is sent -->
+    <div class="thank-you" id="thank-you" hidden>
+      <div class="thank-you-icon">🐾</div>
+      <h3>Thank you<span id="thank-name"></span>!</h3>
+      <p>We got your request and will reach out soon to confirm.</p>
+    </div>
   </div>
 </section>
 
