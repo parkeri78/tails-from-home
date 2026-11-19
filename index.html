@@ -4,111 +4,222 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tails From Home | Family Dog Sitting</title>
+<meta name="description" content="Tails From Home is a family-run dog sitting service: walks, drop-in visits, boarding and overnight sitting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ============ TOP BAR ============ -->
 <header class="site-header">
   <div class="wrap header-inner">
-    <div class="logo">🐾 Tails From Home</div>
+    <a href="#top" class="brand" aria-label="Tails From Home, back to top">
+      <!-- house + paw icon, drawn with SVG (a picture written as code) -->
+      <svg class="brand-icon" viewBox="0 0 64 56" aria-hidden="true">
+        <polyline points="5,26 32,5 59,26" fill="none" stroke="#f7f0e3" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
+        <rect x="45" y="7" width="6" height="11" fill="#f7f0e3"/>
+        <g fill="#d39a5c">
+          <ellipse cx="32" cy="39" rx="9" ry="7.5"/>
+          <circle cx="21.5" cy="28.5" r="3.6"/><circle cx="28" cy="23.5" r="3.6"/>
+          <circle cx="36" cy="23.5" r="3.6"/><circle cx="42.5" cy="28.5" r="3.6"/>
+        </g>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-top">TAILS <em>from</em></span>
+        <span class="brand-bottom">HOME</span>
+      </span>
+    </a>
     <nav>
-      <a href="#about">About</a>
       <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a href="#book">Book Now</a>
+      <a href="#how">How It Works</a>
+      <a href="#family">Our Family</a>
+      <a href="#book" class="nav-btn">Book Now</a>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap">
-    <p class="tagline">Every tail deserves to feel at home.</p>
-    <h1>Loving care for your dog, from our family to yours.</h1>
-    <p>A trusted, family-run dog sitting service — walks, drop-in visits, boarding, and overnight sitting.</p>
-    <a href="#book" class="btn">Request a Booking</a>
-  </div>
-</section>
+<!-- ============ HERO (the big first screen) ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <p class="eyebrow">Family-run dog sitting</p>
+      <h1>Every tail deserves to feel <em>at home.</em></h1>
+      <p class="hero-sub">Walks, drop-in visits, boarding and overnight sitting, from our family to yours. Your pup gets our full attention, and you get updates the whole time.</p>
+      <div class="hero-buttons">
+        <a href="#book" class="btn">Request a Booking</a>
+        <a href="#family" class="btn btn-outline">Call Us</a>
+      </div>
+    </div>
 
-<section id="about" class="section">
-  <div class="wrap">
-    <h2>About Us</h2>
-    <p>We're the Tails From Home family — Mimi, Grace, and Griffin. We started by helping friends and neighbors, and we treat every dog we watch like our own. Whether it's a quick walk or a week-long stay, your pup gets our full attention and love, and you'll always get an update to know they're happy, settled, and in good hands.</p>
-  </div>
-</section>
-
-<section id="contact" class="section alt">
-  <div class="wrap">
-    <h2>The Tails From Home Family</h2>
-    <p class="form-note">Reach out to any of us directly to talk about your dog's stay.</p>
-    <div class="family-grid">
-      <div class="family-card">
-        <h3>Mimi</h3>
-        <a href="tel:8475277117">(847) 527-7117</a>
-      </div>
-      <div class="family-card">
-        <h3>Grace</h3>
-        <a href="tel:8475277199">(847) 527-7199</a>
-      </div>
-      <div class="family-card">
-        <h3>Griffin</h3>
-        <a href="tel:8475277179">(847) 527-7179</a>
-      </div>
+    <!-- Big logo in a framed card, like the thank-you card -->
+    <div class="hero-card">
+      <svg class="hero-logo" viewBox="0 0 300 220" role="img" aria-label="Tails from Home logo">
+        <polyline points="45,90 150,18 255,90" fill="none" stroke="#1b3357" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+        <rect x="205" y="30" width="13" height="28" fill="#1b3357"/>
+        <g fill="#9c6334">
+          <ellipse cx="150" cy="72" rx="13" ry="10.5"/>
+          <circle cx="134.5" cy="57" r="5"/><circle cx="144" cy="49.5" r="5"/>
+          <circle cx="156" cy="49.5" r="5"/><circle cx="165.5" cy="57" r="5"/>
+        </g>
+        <text x="150" y="122" text-anchor="middle" class="logo-tails">TAILS</text>
+        <line x1="68" y1="135" x2="120" y2="135" stroke="#6b7d5e" stroke-width="1.5"/>
+        <line x1="180" y1="135" x2="232" y2="135" stroke="#6b7d5e" stroke-width="1.5"/>
+        <text x="150" y="142" text-anchor="middle" class="logo-from">from</text>
+        <text x="150" y="186" text-anchor="middle" class="logo-home">HOME</text>
+        <text x="150" y="208" text-anchor="middle" class="logo-tag">EVERY TAIL DESERVES TO FEEL AT HOME.</text>
+      </svg>
+      <p class="hero-card-note">♥ Happy, settled &amp; in good hands.</p>
     </div>
   </div>
 </section>
 
-<section id="services" class="section">
+<!-- ============ TRUST STRIP (quick reasons to trust us) ============ -->
+<section class="trust">
+  <div class="wrap trust-grid">
+    <div class="trust-item"><span class="trust-icon">♥</span><div><strong>Family-run</strong><span>Mimi, Grace &amp; Griffin</span></div></div>
+    <div class="trust-item"><span class="trust-icon">✓</span><div><strong>Treated like our own</strong><span>Full attention, every visit</span></div></div>
+    <div class="trust-item"><span class="trust-icon">✉</span><div><strong>Updates the whole time</strong><span>So you can relax</span></div></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+  <div class="wrap narrow center">
+    <h2>About Us</h2>
+    <p class="lead">We're the Tails From Home family: Mimi, Grace, and Griffin. We started by helping friends and neighbors, and we treat every dog we watch like our own. Whether it's a quick walk or a week-long stay, your pup gets our full attention and love, and you'll always get an update to know they're happy, settled, and in good hands.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="section alt">
   <div class="wrap">
     <h2>Services</h2>
     <div class="services-grid">
-      <div class="service-card">
+      <div class="card">
+        <div class="icon-circle" aria-hidden="true">
+          <!-- leash -->
+          <svg viewBox="0 0 24 24"><circle cx="7" cy="5" r="2.5"/><path d="M7 7.5v5l-3 7M7 12.5l3 7M7 9.5l6-2 6 9"/><circle cx="19" cy="18" r="1.6"/></svg>
+        </div>
         <h3>Dog Walking</h3>
-        <p>Daily walks to keep your dog happy and active.</p>
+        <p>Daily walks to keep your dog happy, active and tired out in the best way.</p>
       </div>
-      <div class="service-card">
+      <div class="card">
+        <div class="icon-circle" aria-hidden="true">
+          <!-- house -->
+          <svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7M5 9.5V20h14V9.5M10 20v-5h4v5"/></svg>
+        </div>
         <h3>Drop-In Visits</h3>
-        <p>Quick check-ins for feeding, potty breaks, and playtime.</p>
+        <p>Quick check-ins for feeding, potty breaks, meds and playtime.</p>
       </div>
-      <div class="service-card">
+      <div class="card">
+        <div class="icon-circle" aria-hidden="true">
+          <!-- heart -->
+          <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg>
+        </div>
         <h3>Boarding</h3>
-        <p>Your dog stays with our family, treated like part of it.</p>
+        <p>Your dog stays with our family and is treated like part of it.</p>
       </div>
-      <div class="service-card">
+      <div class="card">
+        <div class="icon-circle" aria-hidden="true">
+          <!-- moon -->
+          <svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+        </div>
         <h3>Overnight Sitting</h3>
-        <p>We come to your home so your dog stays comfortable and calm.</p>
+        <p>We stay at your home so your dog keeps their routine and stays calm.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="book" class="section alt">
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how" class="section">
+  <div class="wrap">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">1</span>
+        <h3>Send a request</h3>
+        <p>Fill out the quick form below, or call one of us.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <h3>We confirm</h3>
+        <p>We check our schedule and get back to you to plan your dog's stay.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <h3>Enjoy your time away</h3>
+        <p>We send updates so you know your pup is happy and settled.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BIG MESSAGE BANNER (like the bottom of the card) ============ -->
+<section class="banner">
+  <div class="wrap center">
+    <p class="banner-text">Enjoy your time away.<br>We've got things covered at home!</p>
+    <a href="#book" class="btn btn-light">Request a Booking</a>
+  </div>
+</section>
+
+<!-- ============ FAMILY / CONTACT ============ -->
+<section id="family" class="section alt">
+  <div class="wrap">
+    <h2>The Tails From Home Family</h2>
+    <p class="section-note">Reach out to any of us directly to talk about your dog's stay.</p>
+    <div class="family-grid">
+      <div class="card family-card">
+        <div class="avatar" aria-hidden="true">M</div>
+        <h3>Mimi</h3>
+        <a href="tel:8475277117" class="phone">(847) 527-7117</a>
+      </div>
+      <div class="card family-card">
+        <div class="avatar" aria-hidden="true">G</div>
+        <h3>Grace</h3>
+        <a href="tel:8475277199" class="phone">(847) 527-7199</a>
+      </div>
+      <div class="card family-card">
+        <div class="avatar" aria-hidden="true">G</div>
+        <h3>Griffin</h3>
+        <a href="tel:8475277179" class="phone">(847) 527-7179</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING FORM ============ -->
+<section id="book" class="section">
   <div class="wrap">
     <h2>Request a Booking</h2>
-    <p class="form-note">Fill this out and we'll get back to you as soon as we can to confirm availability.</p>
+    <p class="section-note">Fill this out and we'll get back to you as soon as we can to confirm availability.</p>
 
     <!--
       SETUP NOTE (remove this comment once done):
       1. Go to formspree.io and make a free account with your business email.
       2. Create a new form, they'll give you a form ID like "abc123wxyz".
       3. Replace YOUR_FORM_ID below with that ID.
-      Until then, this form will show an error when submitted — that's expected, it's not hooked up yet.
+      Until then, this form will show an error when submitted. That's expected, it's not hooked up yet.
     -->
     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="booking-form">
+      <input type="hidden" name="_subject" value="New Tails From Home booking request!">
       <div class="form-row">
         <label>Your Name
-          <input type="text" name="customer_name" required>
+          <input type="text" name="customer_name" autocomplete="name" required>
         </label>
         <label>Phone Number
-          <input type="tel" name="phone" required>
+          <input type="tel" name="phone" autocomplete="tel" required>
         </label>
       </div>
 
       <div class="form-row">
         <label>Email
-          <input type="email" name="email" required>
+          <input type="email" name="email" autocomplete="email" required>
         </label>
         <label>Address
-          <input type="text" name="address" required>
+          <input type="text" name="address" autocomplete="street-address" required>
         </label>
       </div>
 
@@ -148,19 +259,29 @@
         </label>
       </div>
 
-      <label class="full-width">Anything else we should know?
-        <textarea name="notes" rows="3"></textarea>
+      <label>Anything else we should know?
+        <textarea name="notes" rows="3" placeholder="Feeding schedule, meds, quirks, favorite toys..."></textarea>
       </label>
 
-      <button type="submit" class="btn">Submit Request</button>
+      <button type="submit" class="btn btn-full">Submit Request</button>
     </form>
   </div>
 </section>
 
+<!-- ============ FOOTER ============ -->
 <footer class="site-footer">
-  <div class="wrap">
-    <p>&copy; 2026 Tails From Home. Every tail deserves to feel at home.</p>
+  <div class="wrap footer-inner">
+    <div>
+      <p class="footer-brand">Tails <em>from</em> Home</p>
+      <p class="footer-tag">Every tail deserves to feel at home.</p>
+    </div>
+    <div class="footer-phones">
+      <a href="tel:8475277117">Mimi (847) 527-7117</a>
+      <a href="tel:8475277199">Grace (847) 527-7199</a>
+      <a href="tel:8475277179">Griffin (847) 527-7179</a>
+    </div>
   </div>
+  <p class="copyright">&copy; 2026 Tails From Home</p>
 </footer>
 
 </body>
