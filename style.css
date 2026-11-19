@@ -232,17 +232,6 @@ nav .nav-btn:hover { background: #fff; color: var(--navy); text-decoration: none
   font: 700 2rem var(--serif);
   border: 3px solid var(--cream-dark);
 }
-.phone {
-  display: inline-block;
-  margin-top: 4px;
-  padding: 8px 18px;
-  border-radius: 999px;
-  background: var(--sage-light);
-  color: var(--navy);
-  font-weight: 700;
-  text-decoration: none;
-}
-.phone:hover { background: var(--sage); color: #fff; }
 
 /* ---------- Booking form ---------- */
 .booking-form {
@@ -270,15 +259,60 @@ input, select, textarea {
 }
 input:focus, select:focus, textarea:focus { outline: none; border-color: var(--sage); box-shadow: 0 0 0 3px var(--sage-light); }
 
+/* form sections */
+fieldset { border: none; padding: 0; margin: 0 0 8px; display: flex; flex-direction: column; gap: 16px; }
+legend {
+  font: 700 1.5rem var(--serif);
+  color: var(--navy);
+  padding: 0 0 6px;
+  margin-bottom: 4px;
+  width: 100%;
+  border-bottom: 1.5px solid var(--cream-dark);
+}
+legend small, label small { font: 400 .8rem var(--sans); color: var(--muted); }
+
+.pet { background: var(--cream); border-radius: 14px; padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 14px; }
+.pet + .pet { margin-top: 14px; }
+.pet-head { display: flex; justify-content: space-between; align-items: center; }
+.pet-title { font: 700 1.2rem var(--serif); color: var(--paw); }
+.btn-small { padding: 9px 20px; font-size: .9rem; align-self: flex-start; }
+
+/* big tappable boxes for services + meet & greet */
+.choice-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.choice-grid.two { grid-template-columns: 1fr 1fr; }
+.choice { position: relative; font-weight: 400; }
+.choice input { position: absolute; opacity: 0; }
+.choice span {
+  display: block;
+  height: 100%;
+  padding: 14px 10px;
+  border: 1.5px solid #ddd3c2;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  color: var(--text);
+  background: #fffdf9;
+  transition: all .15s;
+}
+.choice span:hover { border-color: var(--sage); }
+.choice input:checked + span { border-color: var(--sage); background: var(--sage-light); box-shadow: inset 0 0 0 1px var(--sage); color: var(--navy); font-weight: 700; }
+.choice input:focus-visible + span { box-shadow: 0 0 0 3px var(--sage-light); }
+
+.error { color: #b3261e; font-weight: 700; margin: 0; }
+.welcome-back { background: var(--sage-light); padding: 12px 16px; border-radius: 12px; margin: 0; color: var(--navy); }
+.link-btn { background: none; border: none; color: var(--paw); font: 700 .9rem var(--sans); text-decoration: underline; cursor: pointer; padding: 0; }
+.remember { flex-direction: row; align-items: center; gap: 10px; font-weight: 400; color: var(--muted); }
+.remember input { width: 18px; height: 18px; accent-color: var(--sage); }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--navy-dark); color: var(--cream); padding: 48px 0 20px; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
 .footer-brand { font: 700 1.8rem var(--serif); margin: 0; }
 .footer-brand em { color: #b8c7a8; font-weight: 600; }
 .footer-tag { margin: 0; opacity: .75; }
-.footer-phones { display: flex; flex-direction: column; gap: 4px; text-align: right; }
-.footer-phones a { color: var(--cream); text-decoration: none; }
-.footer-phones a:hover { text-decoration: underline; }
+.footer-nav { display: flex; gap: 24px; }
+.footer-nav a { color: var(--cream); text-decoration: none; font-weight: 700; }
+.footer-nav a:hover { text-decoration: underline; }
 .copyright { text-align: center; opacity: .55; font-size: .85rem; margin: 32px 0 0; }
 
 /* ---------- Tablets ---------- */
@@ -306,5 +340,6 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--s
   .banner-text { font-size: 1.8rem; }
   .booking-form { padding: 24px 18px; }
   .footer-inner { flex-direction: column; text-align: center; }
-  .footer-phones { text-align: center; }
+  .footer-nav { justify-content: center; }
+  .choice-grid, .choice-grid.two { grid-template-columns: 1fr 1fr; }
 }
