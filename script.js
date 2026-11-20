@@ -125,12 +125,22 @@ lookupMsg.addEventListener('click', e => {
   phoneInput.focus();
 });
 
+// ---------- "Other" service: show a type-in box ----------
+
+const otherCheck = document.getElementById('other-check');
+const otherText  = document.getElementById('other-text');
+otherCheck.addEventListener('change', () => {
+  document.getElementById('other-box').hidden = !otherCheck.checked;
+  otherText.required = otherCheck.checked;   // must type something if "Other" is ticked
+  if (otherCheck.checked) otherText.focus();
+});
+
 // ---------- Send the booking ----------
 
 form.addEventListener('submit', async e => {
   e.preventDefault();   // stop the page from reloading; we send it ourselves
   const errorBox = document.getElementById('form-error');
-  const services = [...form.querySelectorAll('input[name="services"]:checked')].map(c => c.value);
+  const services = [...form.querySelectorAll('input[name="services"]:checked')].map(c => c.value === 'Other' ? 'Other: ' + otherText.value.trim() : c.value);
 
   document.getElementById('service-error').hidden = services.length > 0;
   if (!form.checkValidity() || services.length === 0) {

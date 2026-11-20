@@ -171,6 +171,13 @@ nav .nav-btn:hover { background: #fff; color: var(--navy); text-decoration: none
 
 .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
 
+/* Home Care row: 5 smaller cards under the pet services */
+.sub-heading { text-align: center; font-size: 2rem; margin: 64px 0 24px; }
+.home-grid { grid-template-columns: repeat(5, 1fr); gap: 18px; }
+.home-grid .card { padding: 26px 16px; }
+.home-grid .card h3 { font-size: 1.3rem; }
+.home-grid .card p { font-size: .92rem; }
+
 .icon-circle {
   width: 64px; height: 64px;
   margin: 0 auto 16px;
@@ -222,7 +229,7 @@ nav .nav-btn:hover { background: #fff; color: var(--navy); text-decoration: none
 .banner-text { font-family: var(--serif); font-size: 2.4rem; font-weight: 700; line-height: 1.2; margin: 0 0 28px; }
 
 /* ---------- Family ---------- */
-.family-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 860px; margin: 0 auto; }
+.family-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; max-width: 1000px; margin: 0 auto; }
 .avatar {
   width: 72px; height: 72px;
   margin: 0 auto 14px;
@@ -279,7 +286,7 @@ legend small, label small { font: 400 .8rem var(--sans); color: var(--muted); }
 .btn-small { padding: 9px 20px; font-size: .9rem; align-self: flex-start; }
 
 /* big tappable boxes for services + meet & greet */
-.choice-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.choice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 .choice-grid.two { grid-template-columns: 1fr 1fr; }
 .choice { position: relative; font-weight: 400; }
 .choice input { position: absolute; opacity: 0; }
@@ -322,19 +329,20 @@ legend small, label small { font: 400 .8rem var(--sans); color: var(--muted); }
   .hero-sub { margin-left: auto; margin-right: auto; }
   .hero-buttons { justify-content: center; }
   .hero-card { max-width: 380px; margin: 0 auto; }
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-grid, .home-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* ---------- Phones ---------- */
 @media (max-width: 640px) {
   .wrap { padding: 0 16px; }
+  .site-header { position: static; } /* top bar scrolls away on phones, so it doesn't cover the page */
   .header-inner { flex-direction: column; gap: 10px; }
   nav { gap: 6px 18px; flex-wrap: wrap; justify-content: center; }
   nav a { font-size: .9rem; }
   nav .nav-btn { padding: 6px 14px; }
   .hero { padding: 48px 0 56px; }
   .hero h1 { font-size: 2.4rem; }
-  .trust-grid, .steps, .family-grid, .services-grid { grid-template-columns: 1fr; }
+  .trust-grid, .steps, .family-grid, .services-grid, .home-grid { grid-template-columns: 1fr; }
   .trust-item { justify-content: flex-start; }
   .section { padding: 60px 0; }
   .section h2 { font-size: 2.1rem; }
